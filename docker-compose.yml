@@ -5,4 +5,4 @@ services:
     volumes:
       - ./:/testapp
     entrypoint: /testapp/entrypoint.sh
-    container_name: testapp
+    container_name: api-testapp
