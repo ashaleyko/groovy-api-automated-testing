@@ -1,0 +1,26 @@
+plugins {
+    id 'groovy'
+    id 'java'
+}
+
+group 'demo.groovy'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:2.5.13'
+    implementation 'io.rest-assured:rest-assured:3.3.0'
+    implementation 'org.spockframework:spock-core:1.3-groovy-2.5', {
+        exclude module: 'grovy-all'
+    }
+    implementation 'org.aeonbits.owner:owner:1.0.12'
+}
+
+test {
+    testLogging.showStandardStreams = true
+}

@@ -1,0 +1,8 @@
+version: "3"
+services:
+  testapp:
+    build: .
+    volumes:
+      - ./:/testapp
+    entrypoint: /testapp/entrypoint.sh
+    container_name: testapp
